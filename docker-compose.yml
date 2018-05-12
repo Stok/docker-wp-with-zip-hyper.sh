@@ -1,0 +1,15 @@
+version: '1'
+services:
+  mywordpress:
+    image: <your-docker-hub-username>/wp-with-zip:latest
+    fip: <your-fip>
+    links:
+      - mysqldb:mysql
+    depends_on:
+      - mysqldb
+    ports:
+      - "8080:80"
+  mysqldb:
+    image: mariadb
+    environment:
+        - MYSQL_ROOT_PASSWORD=<sql_root_pw>
