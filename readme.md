@@ -1,4 +1,4 @@
-# (Hyper.sh deploy for wordpress)
+# Hyper.sh deploy for a customised wordpress
 
 To be able to use Duplicator in wordpress, we need to be able to zip. For this, I created a Dockerfile based on wordpress:latest. See https://github.com/Stok/docker-wp-with-zip.git. This is sitting on my docker-hub account.
 Now, to make use of it and deploy to hyper.sh, I need to create a docker-compose.yml file (see https://docs.hyper.sh/hyper/Feature/container/compose.html)
